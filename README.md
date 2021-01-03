@@ -1,3 +1,3 @@
 # HttpMessenger
 
-A description of this package.
+まだ開発中です。

@@ -14,7 +14,6 @@
 		1361E55F25A1B31600D15583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1361E55D25A1B31600D15583 /* LaunchScreen.storyboard */; };
 		1361E56A25A1B31800D15583 /* iOSExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361E56925A1B31800D15583 /* iOSExampleTests.swift */; };
 		1361E57525A1B31800D15583 /* iOSExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361E57425A1B31800D15583 /* iOSExampleUITests.swift */; };
-		1361E59425A1B3B900D15583 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1361E58E25A1B3B900D15583 /* README.md */; };
 		1373FC8C25A1B9E30069FC4F /* HttpMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1373FC8B25A1B9E30069FC4F /* HttpMessenger.framework */; };
 		1373FC8D25A1B9E30069FC4F /* HttpMessenger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1373FC8B25A1B9E30069FC4F /* HttpMessenger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -64,8 +63,6 @@
 		1361E57025A1B31800D15583 /* iOSExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1361E57425A1B31800D15583 /* iOSExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSExampleUITests.swift; sourceTree = "<group>"; };
 		1361E57625A1B31800D15583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1361E58525A1B3B900D15583 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
-		1361E58E25A1B3B900D15583 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1373FC4925A1B6570069FC4F /* iOSExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSExample.entitlements; sourceTree = "<group>"; };
 		1373FC8B25A1B9E30069FC4F /* HttpMessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HttpMessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,8 +96,6 @@
 		1361E54625A1B31400D15583 = {
 			isa = PBXGroup;
 			children = (
-				1361E58525A1B3B900D15583 /* Package.swift */,
-				1361E58E25A1B3B900D15583 /* README.md */,
 				1361E55125A1B31400D15583 /* iOSExample */,
 				1361E56825A1B31800D15583 /* iOSExampleTests */,
 				1361E57325A1B31800D15583 /* iOSExampleUITests */,
@@ -265,7 +260,6 @@
 			files = (
 				1361E55F25A1B31600D15583 /* LaunchScreen.storyboard in Resources */,
 				1361E55C25A1B31600D15583 /* Assets.xcassets in Resources */,
-				1361E59425A1B3B900D15583 /* README.md in Resources */,
 				1361E55A25A1B31400D15583 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

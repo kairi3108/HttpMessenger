@@ -54,6 +54,8 @@
 		1373FC7325A1B8B50069FC4F /* HttpMessengerErrorLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMessengerErrorLogger.swift; sourceTree = "<group>"; };
 		1373FC7425A1B8B50069FC4F /* HttpMessengerSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMessengerSession.swift; sourceTree = "<group>"; };
 		1373FC7525A1B8B50069FC4F /* HTTPHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
+		1373FCB325A1C56D0069FC4F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1373FCB425A1C57C0069FC4F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		1373FC0D25A1B4940069FC4F = {
 			isa = PBXGroup;
 			children = (
+				1373FCB425A1C57C0069FC4F /* README.md */,
 				1373FC4525A1B58C0069FC4F /* Deployment */,
 				1373FC1925A1B4940069FC4F /* Source */,
 				1373FC2425A1B4960069FC4F /* Tests */,
@@ -120,6 +123,7 @@
 		1373FC4525A1B58C0069FC4F /* Deployment */ = {
 			isa = PBXGroup;
 			children = (
+				1373FCB325A1C56D0069FC4F /* LICENSE */,
 				1373FC4625A1B5A20069FC4F /* Package.swift */,
 			);
 			name = Deployment;
