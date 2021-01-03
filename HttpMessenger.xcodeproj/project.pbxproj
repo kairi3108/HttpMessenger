@@ -12,7 +12,7 @@
 		1373FC2825A1B4960069FC4F /* HttpMessenger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1373FC1A25A1B4940069FC4F /* HttpMessenger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1373FC3825A1B5070069FC4F /* HttpMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373FC3725A1B5070069FC4F /* HttpMessenger.swift */; };
 		1373FC3F25A1B5310069FC4F /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373FC3B25A1B5100069FC4F /* XCTestManifests.swift */; };
-		1373FC6225A1B84D0069FC4F /* BasicNetworkingActivityLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373FC5725A1B84D0069FC4F /* BasicNetworkingActivityLogger.swift */; };
+		1373FC6225A1B84D0069FC4F /* HttpMessengerLoggerActivityLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373FC5725A1B84D0069FC4F /* HttpMessengerLoggerActivityLogger.swift */; };
 		1373FC6925A1B84D0069FC4F /* URLSessionDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373FC5F25A1B84D0069FC4F /* URLSessionDelegateImpl.swift */; };
 		1373FC7725A1B8B50069FC4F /* RequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373FC6E25A1B8B50069FC4F /* RequestSerializer.swift */; };
 		1373FC7825A1B8B50069FC4F /* HttpMessengerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373FC6F25A1B8B50069FC4F /* HttpMessengerError.swift */; };
@@ -44,7 +44,7 @@
 		1373FC3725A1B5070069FC4F /* HttpMessenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMessenger.swift; sourceTree = "<group>"; };
 		1373FC3B25A1B5100069FC4F /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		1373FC4625A1B5A20069FC4F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		1373FC5725A1B84D0069FC4F /* BasicNetworkingActivityLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNetworkingActivityLogger.swift; sourceTree = "<group>"; };
+		1373FC5725A1B84D0069FC4F /* HttpMessengerLoggerActivityLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMessengerLoggerActivityLogger.swift; sourceTree = "<group>"; };
 		1373FC5F25A1B84D0069FC4F /* URLSessionDelegateImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDelegateImpl.swift; sourceTree = "<group>"; };
 		1373FC6E25A1B8B50069FC4F /* RequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSerializer.swift; sourceTree = "<group>"; };
 		1373FC6F25A1B8B50069FC4F /* HttpMessengerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMessengerError.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		1373FC5625A1B84D0069FC4F /* NetworkingLogger */ = {
 			isa = PBXGroup;
 			children = (
-				1373FC5725A1B84D0069FC4F /* BasicNetworkingActivityLogger.swift */,
+				1373FC5725A1B84D0069FC4F /* HttpMessengerLoggerActivityLogger.swift */,
 			);
 			path = NetworkingLogger;
 			sourceTree = "<group>";
@@ -266,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1373FC7D25A1B8B50069FC4F /* HttpMessengerSession.swift in Sources */,
-				1373FC6225A1B84D0069FC4F /* BasicNetworkingActivityLogger.swift in Sources */,
+				1373FC6225A1B84D0069FC4F /* HttpMessengerLoggerActivityLogger.swift in Sources */,
 				1373FC7725A1B8B50069FC4F /* RequestSerializer.swift in Sources */,
 				1373FC7A25A1B8B50069FC4F /* HttpMessengerDefines.swift in Sources */,
 				1373FC7825A1B8B50069FC4F /* HttpMessengerError.swift in Sources */,

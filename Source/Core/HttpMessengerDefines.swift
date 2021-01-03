@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HTTPMethodType: String, Codable {
+public enum HTTPMethodType: String, Codable {
     case get = "GET"
     case post = "POST"
     case delete = "DELETE"
@@ -15,12 +15,12 @@ enum HTTPMethodType: String, Codable {
     case put = "PUT"
 }
 
-enum HTTPScheme: String, Codable {
+public enum HTTPScheme: String, Codable {
     case https = "https://"
     case http = "http://"
 }
 
-enum HttpStatus: Int, Codable {
+public enum HttpStatus: Int, Codable {
     case `continue` = 100
     case switchingProtocols = 101
     case processing = 102

@@ -7,25 +7,25 @@
 
 import Foundation
 
-protocol RequestSerializer {
+public protocol RequestSerializer {
     var contentType: String? { get }
     init(contentType: String?)
     
     func encode(_ data:Any?) -> Data?
 }
 
-protocol QueryRequestSerializer: RequestSerializer {
+public protocol QueryRequestSerializer: RequestSerializer {
     func encode(_ data: Any?) -> [URLQueryItem]?
 }
 
-class DataSerializer: RequestSerializer {
-    let contentType: String?
+public class DataSerializer: RequestSerializer {
+    public let contentType: String?
     
-    required init(contentType: String? = nil) {
+    required public init(contentType: String? = nil) {
         self.contentType = contentType
     }
     
-    func encode(_ data: Any?) -> Data? {
+    public func encode(_ data: Any?) -> Data? {
         if data != nil, let data = data, data is Data {
             return data as? Data
         } else {
@@ -34,14 +34,14 @@ class DataSerializer: RequestSerializer {
     }
 }
 
-class StringSerializer: RequestSerializer {
-    let contentType: String?
+public class StringSerializer: RequestSerializer {
+    public let contentType: String?
     
-    required init(contentType: String? = "text/plain") {
+    required public init(contentType: String? = "text/plain") {
         self.contentType = contentType
     }
     
-    func encode(_ data: Any?) -> Data? {
+    public func encode(_ data: Any?) -> Data? {
         if data != nil, let data = data, data is Data {
             return data as? Data
         } else {
@@ -50,11 +50,11 @@ class StringSerializer: RequestSerializer {
     }
 }
 
-class JSONSerializer: RequestSerializer {
-    let contentType: String?
+public class JSONSerializer: RequestSerializer {
+    public let contentType: String?
     let wirtingOptions: JSONSerialization.WritingOptions
     
-    required convenience init(contentType: String? = "application/json") {
+    required public convenience init(contentType: String? = "application/json") {
         self.init(contentType: contentType, options: .fragmentsAllowed)
     }
     
@@ -63,7 +63,7 @@ class JSONSerializer: RequestSerializer {
         self.wirtingOptions = options
     }
     
-    func encode(_ data: Any?) -> Data? {
+    public func encode(_ data: Any?) -> Data? {
         if let data = data {
             return try! JSONSerialization.data(withJSONObject: data, options: wirtingOptions)
         } else {
@@ -72,18 +72,18 @@ class JSONSerializer: RequestSerializer {
     }
 }
 
-class URLQueryRequestSerialiser: QueryRequestSerializer {
-    let contentType: String?
+public class URLQueryRequestSerialiser: QueryRequestSerializer {
+    public let contentType: String?
     
-    required init(contentType: String? = "application/x-www-form-urlencoded") {
+    required public init(contentType: String? = "application/x-www-form-urlencoded") {
         self.contentType = contentType
     }
     
-    func encode(_ data: Any?) -> Data? {
+    public func encode(_ data: Any?) -> Data? {
         return nil
     }
     
-    func encode(_ data: Any?) -> [URLQueryItem]? {
+    public func encode(_ data: Any?) -> [URLQueryItem]? {
         var ret: [URLQueryItem]? = nil
         if data is [String : String], let data = data as? [String : String] {
             ret = []

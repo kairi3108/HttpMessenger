@@ -7,22 +7,22 @@
 
 import Foundation
 
-class HttpMessengerSession: NSObject {
+public class HttpMessengerSession: NSObject {
     
     private (set) var urlSession: URLSession
-    static var logger: HttpMessengerLogger? = nil
+    public static var logger: HttpMessengerLogger? = nil
     private var defaultHeaders: [HTTPHeader]
     private var sessionDelegate: URLSessionDelegateImpl?
     
     private static let kDelegateMode = true
     
-    typealias RequestProgress = (_ networking: HttpMessengerSession, _ urlRequest: URLRequest?, _ didSendBytesSent: Int64, _ totalBytesExpectedToSend: Int64, _ totalBytesExpectedToSend: Int64) -> Void
-    typealias ResponseProgress = (_ networking: HttpMessengerSession, _ urlRequest: URLRequest?, _ didReceiveBytes: Int64, _ totalBytesReceived: Int64, _ totalBytesReceiveExpected: Int64) -> Void
-    typealias ResponseIntercepter = (_ networking: HttpMessengerSession, _ data: Data?, _ urlRequest: URLRequest?, _ urlResponse: URLResponse?, _ error: Error?) -> Error?
-    typealias Success = (_ networking: HttpMessengerSession, _ urlRequest: URLRequest, _ urlResponse: URLResponse, _ data: Any?) -> Void
-    typealias Failure = (_ networking: HttpMessengerSession, _ urlRequest: URLRequest, _ urlResponse: URLResponse?, _ error: HttpMessengerError) -> Void
+    public typealias RequestProgress = (_ networking: HttpMessengerSession, _ urlRequest: URLRequest?, _ didSendBytesSent: Int64, _ totalBytesExpectedToSend: Int64, _ totalBytesExpectedToSend: Int64) -> Void
+    public typealias ResponseProgress = (_ networking: HttpMessengerSession, _ urlRequest: URLRequest?, _ didReceiveBytes: Int64, _ totalBytesReceived: Int64, _ totalBytesReceiveExpected: Int64) -> Void
+    public typealias ResponseIntercepter = (_ networking: HttpMessengerSession, _ data: Data?, _ urlRequest: URLRequest?, _ urlResponse: URLResponse?, _ error: Error?) -> Error?
+    public typealias Success = (_ networking: HttpMessengerSession, _ urlRequest: URLRequest, _ urlResponse: URLResponse, _ data: Any?) -> Void
+    public typealias Failure = (_ networking: HttpMessengerSession, _ urlRequest: URLRequest, _ urlResponse: URLResponse?, _ error: HttpMessengerError) -> Void
     
-    typealias InnerCompletion = (_ urlRequest: URLRequest, _ data: Data?, _ urlResponse: URLResponse?, _ error: HttpMessengerError?) -> Void
+    public typealias InnerCompletion = (_ urlRequest: URLRequest, _ data: Data?, _ urlResponse: URLResponse?, _ error: HttpMessengerError?) -> Void
     
     var requestArrays:[(request: URLRequest, task: URLSessionTask)] = []
     
@@ -153,8 +153,7 @@ class HttpMessengerSession: NSObject {
 /// DataTask
 extension HttpMessengerSession {
 
-
-    static func request(_ url:URL,
+    public static func request(_ url:URL,
                         methodType: HTTPMethodType,
                         requestSerializer: RequestSerializer = JSONSerializer(),
                         responseDeserializer: ResponseDeserializer = JSONDeserializer(),
@@ -183,7 +182,7 @@ extension HttpMessengerSession {
                                   failure: failure)
     }
     
-    func request(_ url:URL,
+    public func request(_ url:URL,
                  methodType: HTTPMethodType,
                  requestSerializer: RequestSerializer = JSONSerializer(),
                  responseDeserializer: ResponseDeserializer = JSONDeserializer(),
@@ -304,7 +303,7 @@ extension HttpMessengerSession {
 /// Download
 extension HttpMessengerSession {
     
-    func download(_ url:URL,
+    public func download(_ url:URL,
                  methodType: HTTPMethodType,
                  requestSerializer: RequestSerializer = JSONSerializer(),
                  responseDeserializer: ResponseDeserializer = JSONDeserializer(),
@@ -373,7 +372,7 @@ extension HttpMessengerSession {
 /// Upload
 extension HttpMessengerSession {
     
-    func upload(_ url:URL,
+    public func upload(_ url:URL,
                  methodType: HTTPMethodType,
                  requestSerializer: RequestSerializer = JSONSerializer(),
                  responseDeserializer: ResponseDeserializer = JSONDeserializer(),

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LogLevel: Int {
+public enum LogLevel: Int {
     case none = 0
     case verbose = 1
     case debug = 2
@@ -16,7 +16,7 @@ enum LogLevel: Int {
     case error = 5
 }
 
-class LogDetail {
+public class LogDetail {
     let logLevel: LogLevel
     let dateFormatter: DateFormatter
     let date: Bool
@@ -24,7 +24,7 @@ class LogDetail {
     let fileInfo: Bool
     let funcNmae: Bool
     
-    init(_ logLevel: LogLevel = .none, dateFormatter: DateFormatter? = nil, date: Bool = false, level: Bool = false, fileInfo: Bool = false, funcNmae: Bool = false) {
+    public init(_ logLevel: LogLevel = .none, dateFormatter: DateFormatter? = nil, date: Bool = false, level: Bool = false, fileInfo: Bool = false, funcNmae: Bool = false) {
         self.logLevel = logLevel
         if let dateFormat = dateFormatter {
             self.dateFormatter = dateFormat
@@ -40,11 +40,11 @@ class LogDetail {
     }
 }
 
-class HttpMessengerLogger {
+open class HttpMessengerLogger {
     var queue: DispatchQueue
     var detail: LogDetail
     
-    init(_ detail: LogDetail = LogDetail(), queue: DispatchQueue = DispatchQueue(label: "basicnetworking.logger.default")) {
+    public init(_ detail: LogDetail = LogDetail(), queue: DispatchQueue = DispatchQueue(label: "basicnetworking.logger.default")) {
         self.detail = detail
         self.queue = queue
     }
@@ -87,7 +87,7 @@ class HttpMessengerLogger {
         return "\(log)> " + String(describing: closureResult)
     }
     
-    func output(_ logLevel: LogLevel = .none, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, closure: @escaping () -> Any?) {
+    open func output(_ logLevel: LogLevel = .none, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, closure: @escaping () -> Any?) {
         if detail.logLevel == .none || detail.logLevel.rawValue >= logLevel.rawValue {
             return
         }

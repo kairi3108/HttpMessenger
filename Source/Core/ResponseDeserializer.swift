@@ -7,19 +7,19 @@
 
 import Foundation
 
-protocol ResponseDeserializer {
+public protocol ResponseDeserializer {
     func decode(_ data:Data?) throws -> Any?
 }
 
-class JSONDeserializer: ResponseDeserializer {
+public class JSONDeserializer: ResponseDeserializer {
     
     let readingOptions: JSONSerialization.ReadingOptions
     
-    init(_ readingOptions: JSONSerialization.ReadingOptions = .allowFragments) {
+    public init(_ readingOptions: JSONSerialization.ReadingOptions = .allowFragments) {
         self.readingOptions = readingOptions
     }
     
-    func decode(_ data: Data?) throws -> Any? {
+    public func decode(_ data: Data?) throws -> Any? {
         if let data = data {
             return try JSONSerialization.jsonObject(with: data, options: readingOptions)
         } else {
@@ -28,15 +28,15 @@ class JSONDeserializer: ResponseDeserializer {
     }
 }
 
-class StringDeserializer: ResponseDeserializer {
+public class StringDeserializer: ResponseDeserializer {
     
     let stringEncoding: String.Encoding
     
-    init(_ encoding: String.Encoding = .utf8) {
+    public init(_ encoding: String.Encoding = .utf8) {
         stringEncoding = encoding
     }
     
-    func decode(_ data: Data?) throws -> Any? {
+    public func decode(_ data: Data?) throws -> Any? {
         if let data = data {
             return String.init(data: data, encoding: stringEncoding)
         } else {
@@ -45,8 +45,8 @@ class StringDeserializer: ResponseDeserializer {
     }
 }
 
-class DataDeserializer: ResponseDeserializer {
-    func decode(_ data: Data?) throws -> Any? {
+public class DataDeserializer: ResponseDeserializer {
+    public func decode(_ data: Data?) throws -> Any? {
         return data
     }
 }

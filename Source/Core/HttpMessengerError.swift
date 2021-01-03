@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HttpMessengerError: Error {
+public enum HttpMessengerError: Error {
     
     case URLError(at: URL)
     case encoderError

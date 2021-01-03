@@ -6,14 +6,23 @@
 //
 
 import UIKit
+import HttpMessenger
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var getButton: UIButton!
+    
+    
+    @IBAction func getButtonTaped(_ sender: UIButton) {
+        // get
+        _ = HttpMessengerSession.request(URL(string: "https://httpbin.org/get")!,
+                                         methodType: .get,
+                                         success: { (session, request, response, data) in
+                                            
+                                         },
+                                         failure: { (session, request, response, error) in
+                                            
+                                         })
     }
-
-
 }
 
